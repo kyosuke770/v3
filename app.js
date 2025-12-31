@@ -133,6 +133,34 @@ function startVideoOrder() {
   revealed = false;
   render();
 }
+function getBlockProgress(blockIndex) {
+  const blockCards = getCardsByBlock(blockIndex);
+  const total = blockCards.length;
+
+  const learned = blockCards.filter(c => {
+    const s = srs[c.no];
+    return s && s.interval > 0; // GOOD以上
+  }).length;
+
+  return { learned, total };
+}
+function getCurrentBlockIndex() {
+  if (!cardsByMode.length) return 1;
+  return getBlockIndex(cardsByMode[0].no);
+}
+function renderProgress() {
+  const blockIndex = getCurrentBlockIndex();
+  const { learned, total } = getBlockProgress(blockIndex);
+
+  const textEl = document.getElementById("progressText");
+  const barEl = document.getElementById("progressBar");
+
+  if (!textEl || !barEl) return;
+
+  textEl.textContent = `ブロック ${blockIndex}：${learned} / ${total}`;
+  const percent = total ? Math.round((learned / total) * 100) : 0;
+  barEl.style.width = `${percent}%`;
+}
 
 /*************************************************
  * Review (Due) mode
@@ -167,11 +195,16 @@ function renderBlockButtons() {
   const max = getMaxBlock();
 
   for (let b = 1; b <= max; b++) {
+    const { learned, total } = getBlockProgress(b);
+    const percent = total ? Math.round((learned / total) * 100) : 0;
+
     const btn = document.createElement("button");
     const start = (b - 1) * 30 + 1;
     const end = b * 30;
-    btn.textContent = `${start}-${end}`;
+
+    btn.textContent = `${start}-${end} ${percent}%`;
     btn.onclick = () => startBlock(b);
+
     wrap.appendChild(btn);
   }
 }
@@ -204,6 +237,7 @@ function render() {
     jpEl.textContent = currentJp;
     enEl.textContent = revealed ? currentAnswer : "タップして答え";
   }
+  renderProgress();
 }
 
 /*************************************************
