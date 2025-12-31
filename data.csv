@@ -1,0 +1,36 @@
+no,jp,en,slots,video,lv
+1,すぐに終わらせますね。,I'll be quick.,,1,1
+2,もう少しで{x}。,I'm almost {x}.,終わります=done|準備ができます=ready,1,2
+3,お待たせしました。,Sorry for the wait.,,1,1
+4,今向かっています。,I'm on my way.,,1,1
+5,少し遅れます。,I'm running late.,,1,1
+6,ゆっくりどうぞ。,Take your time.,,1,1
+7,少し{x}ありますか？,Do you have {x}?,時間=a minute|少し時間=a second,1,2
+8,{x}もいいですか？,Can I {x}?,一つ聞いて=ask something|ここ座って=sit here,1,2
+9,ご遠慮なく{x}ください。,Feel free to {x}.,聞いて=ask|使って=use this,1,2
+10,どうしたんですか？,What happened?,,1,1
+11,{x}次第ですね。,It depends on {x}.,天気=the weather|交通状況=the traffic,1,2
+12,納得です。,That makes sense.,,1,1
+13,それなら納得です。,Fair enough.,,1,1
+14,一理ありますね。,You have a point.,,1,1
+15,そうだと{x}。,I {x} so.,思います=suppose|思うよ=guess,1,2
+16,あまり{x}ないです。,I'd rather not {x}.,言いたく=say|行きたく=go,1,2
+17,私が{x}よ。,I'll {x}.,やります=handle it|確認します=check it,1,2
+18,{x}ありがとうございます。,Thanks for {x}.,ご理解=understanding|お待ちいただき=waiting,1,2
+19,{x}感謝します。,I appreciate {x}.,お気持ち=the offer|お時間=your time,1,2
+20,気にしないで。,No worries.,,1,1
+21,うっかり忘れてました。,It slipped my mind.,,1,1
+22,予想外でした。,I didn't see that coming.,,1,1
+23,{x}を見ましょう。,Let's see {x}.,様子=how it goes|どうなるか=what happens,1,2
+24,また連絡します。,Let's keep in touch.,,1,1
+25,また{x}で。,I'll catch you {x}.,後で=later|すぐに=soon,1,2
+26,お先にどうぞ。,Please go ahead.,,1,1
+27,{x}でしょう。,You must be {x}.,お疲れ=tired|お腹空いた=hungry,1,2
+28,大丈夫ですか？,Is everything all right?,,1,1
+29,{x}もらえますか？,Could you {x}?,説明して=explain|詳しく=elaborate,1,2
+30,残念ながら{x}です。,I'm afraid {x}.,そうです=so|できません=I can't,1,2
+31,少し待ってください。,Please wait a moment.,,2,1
+32,問題ありません。,No problem.,,2,1
+33,確認しますね。,Let me check.,,2,1
+34,今{x}中です。,I'm {x} now.,移動=on the way|作業=working,2,2
+35,それで大丈夫です。,That works for me.,,2,1
